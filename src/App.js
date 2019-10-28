@@ -4,6 +4,7 @@ import Welcome from './components/Welcome/Welcome'
 import Main from './components/Main/Main'
 import Header from './components/Header/Header'
 import { Button } from 'grommet'
+import Sidebar from './components/Sidebar/Sidebar'
 import './App.css';
 
 const toggleMenu = (e) => {
@@ -16,6 +17,7 @@ function App() {
   return (
     <div>
       <Header />
+      <Sidebar />
       {Auth.isAuthenticated ? <Main /> : <Welcome toggleMenu={toggleMenu} props={this}/>}
     </div>
   );
